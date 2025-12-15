@@ -264,7 +264,7 @@ body.light-mode .spinner {
     nav {
         flex-wrap: wrap;
         gap: 8px;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     nav a,
