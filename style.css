@@ -45,6 +45,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
+    flex-wrap: nowrap
 }
 nav a, .themeBtn {
     text-decoration: none;
