@@ -217,7 +217,7 @@ body.light-mode .spinner {
     transition: background-color 0.4s ease;
     margin-left: auto;
     flex-shrink: 0;
-    margin: 0 0.25rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,30 +226,25 @@ body.light-mode .spinner {
 
 .theme-toggle .icon {
     position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
     top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    transition: opacity 0.3s ease, transform 0.4s ease;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
 }
 
 .theme-toggle .sun {
-    left: 10px;
     opacity: 0;
 }
 
 .theme-toggle .moon {
-    right: 10px;
     opacity: 1;
-    transform: translateY(-50%);
-}
-
-.light-mode .theme-toggle {
-    background-color: #ffd966;
 }
 
 .light-mode .theme-toggle .sun {
     opacity: 1;
-    transform: translateY(-50%) scale(1.1);
 }
 
 .light-mode .theme-toggle .moon {
@@ -268,9 +263,8 @@ body.light-mode .spinner {
     }
 
     nav {
-        margin-left: auto;
         gap: 8px;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
 
     nav a,
