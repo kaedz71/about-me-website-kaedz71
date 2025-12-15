@@ -42,7 +42,10 @@ nav {
     border-radius: 10px;
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 1rem;
 }
 nav a, .themeBtn {
     text-decoration: none;
@@ -214,6 +217,8 @@ body.light-mode .spinner {
     background-color: #0b3c8a;
     transition: background-color 0.4s ease;
     margin-left: auto;
+    flex-shrink: 0;
+    margin: 0 0.25rem;
 }
 
 .theme-toggle .icon {
@@ -285,3 +290,4 @@ body.light-mode .spinner {
         padding: 10px;
     }
 }
+
