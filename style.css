@@ -1,32 +1,57 @@
+/* ===== Base ===== */
+
 body {
     background-color: rgb(4, 20, 70);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.img {
-  width: 50%;
-  max-width: 700px; 
-  height: auto;
-  border-radius: 8px;
+
+.container {
+    max-width: 900px;
+    padding: 20px;
 }
-.section {
-    color: lightskyblue;
-    margin-bottom: 30px;
-}
-.section-text {
-    color: lightskyblue;
-    margin-bottom: 30px;
-}
-.page-title{
+
+.page-title {
     font-size: 300%;
     color: lightskyblue;
 }
-.title {
+
+.title,
+.section,
+.section-text,
+figcaption,
+#randomPlaneResult,
+#randomGameResult {
     color: lightskyblue;
+    margin-bottom: 30px;
 }
+
 footer {
+    margin-top: 100px;
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
 }
+
+/* ===== Images ===== */
+
+.img {
+    width: 50%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 30px;
+    object-fit: contain;
+}
+
+/* ===== Lists & Links ===== */
+
 .list a {
     color: rgb(172, 255, 169);
     text-decoration: none;
@@ -36,203 +61,57 @@ footer {
     color: rgb(109, 255, 184);
     text-decoration: underline;
 }
+
+/* ===== Navbar ===== */
+
 nav {
     background-color: lightskyblue;
-    padding: 10px;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     margin-bottom: 20px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
-    flex-wrap: nowrap
 }
+
 nav a {
     text-decoration: none;
     color: navy;
     background-color: deepskyblue;
     border-radius: 5px;
     font-size: 20px;
-    gap: 10px;
     padding: 8px 15px;
-    display: inline-block;
-    border: 0px;
     white-space: nowrap;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-nav a:hover, .themeBtn:hover {
-    background-color: dodgerblue;
-    color:white
-}
-.container {
-    max-width: 900px;
-    padding: 20px;
+    margin-right: 8px;
 }
 
-footer {
-    margin-top: 100px;
-    text-align: left;
-}
-
-figcaption {
-    color: lightskyblue;
-    margin-bottom: 30px;
-}
-
-#randomPlaneResult, #randomGameResult {
-    color: lightskyblue;
-}
-
-.randomiserBtn {
-    display: inline-block;
-    margin-top: 30px;
-    background-color: lightskyblue;
-    padding: 10px 18px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: navy;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-.randomiserBtn:hover {
+nav a:hover {
     background-color: dodgerblue;
     color: white;
 }
 
-.light-mode body {
-    color: navy;
-    background-color: rgb(153, 223, 247);
-}
-.light-mode nav a,.light-mode .themeBtn {
-    text-decoration: none;
-    color: lightskyblue;
-    background-color: rgb(8, 49, 120);
-    border-radius: 5px;
-    font-size: 20px;
-    margin-right: 20px;
-    border: 0px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.light-mode nav a:hover,.light-mode .themeBtn:hover {
-    color: rgb(8, 49, 120);
-    background-color: rgb(96, 176, 255);
-}
-
-.light-mode a {
-    color: rgb(24, 92, 24);
-}
-
-.light-mode {
-    color: navy;
-    background-color: rgb(153, 223, 247);
-}
-
-.light-mode p,
-.light-mode h1,
-.light-mode h2,
-.light-mode h3,
-.light-mode h4,
-.light-mode li,
-.light-mode figcaption {
-    color: navy;
-}
-
-body,
-p, h1, h2, h3, h4, li, figcaption,
-nav, a, button, footer {
-    transition:
-      background-color 0.7s ease,
-      color 0.7s ease,
-      border-color 0.7s ease;
-}
-
-.result {
-    position: relative;
-    min-height: 50px;
-    font-size: 1.2rem;
-    overflow: hidden;
-}
-
-.loading {
-    opacity: 0;
-    transition: 1s ease;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    pointer-events: none;
-}
-
-.content {
-    opacity: 0;
-    transition: 1.5s ease;
-    margin-top: 30px;
-}
-
-.content img {
-    border-radius: 8px;
-    display: block;
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.spinner {
-    width: 32px;
-    height: 32px;
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    border-top: 4px solid #ffffff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-body.light-mode .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.2);
-    border-top: 4px solid #000000;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-.hidden {
-    opacity: 0;
-}
+/* ===== Theme Toggle ===== */
 
 .theme-toggle {
-    position: relative;
+    margin-left: auto;
     width: 60px;
     height: 32px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     background-color: #0b3c8a;
-    transition: background-color 0.4s ease;
-    margin-left: auto;
-    flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     overflow: hidden;
 }
 
 .theme-toggle .icon {
     position: absolute;
-    width: 16px;
-    height: 16px;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
     line-height: 16px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease;
 }
 
 .theme-toggle .sun {
@@ -243,6 +122,45 @@ body.light-mode .spinner {
     opacity: 1;
 }
 
+/* ===== Buttons ===== */
+
+.randomiserBtn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 18px;
+    background-color: lightskyblue;
+    color: navy;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.randomiserBtn:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* ===== Light Mode ===== */
+
+.light-mode {
+    background-color: rgb(153, 223, 247);
+    color: navy;
+}
+
+.light-mode nav a {
+    color: lightskyblue;
+    background-color: rgb(8, 49, 120);
+}
+
+.light-mode nav a:hover {
+    color: rgb(8, 49, 120);
+    background-color: rgb(96, 176, 255);
+}
+
+.light-mode .theme-toggle {
+    background-color: #ffd966;
+}
+
 .light-mode .theme-toggle .sun {
     opacity: 1;
 }
@@ -250,6 +168,77 @@ body.light-mode .spinner {
 .light-mode .theme-toggle .moon {
     opacity: 0;
 }
+
+.light-mode a,
+.light-mode p,
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode li,
+.light-mode figcaption {
+    color: navy;
+}
+
+/* ===== Animations / Transitions ===== */
+
+body,
+nav,
+a,
+button,
+footer {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* ===== Loading / Results ===== */
+
+.result {
+    min-height: 50px;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.loading {
+    opacity: 0;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.content {
+    opacity: 0;
+    margin-top: 30px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* ===== Spinner ===== */
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.light-mode .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    border-top: 4px solid #000000;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== Mobile ===== */
 
 @media (max-width: 600px) {
 
@@ -262,15 +251,14 @@ body.light-mode .spinner {
         text-align: center;
     }
 
-    nav {
-        gap: 8px;
-        justify-content: flex-start;
-    }
-
-    nav a,
-    .themeBtn {
+    nav a {
         font-size: 16px;
         padding: 6px 10px;
+    }
+
+    .theme-toggle {
+        width: 48px;
+        height: 28px;
     }
 
     .randomiserBtn {
@@ -278,19 +266,7 @@ body.light-mode .spinner {
         font-size: 16px;
     }
 
-    .content img {
-        width: 100%;
-        max-width: 100%;
-    }
-
     .container {
         padding: 10px;
     }
-}
-
-.theme-toggle .icon {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
 }
