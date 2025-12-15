@@ -93,43 +93,55 @@ nav a:hover {
 
 /* ===== Theme Toggle ===== */
 
+/* Theme toggle button */
 .theme-toggle {
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-
     width: 60px;
     height: 32px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
-    background-color: #0b3c8a;
-
+    background-color: #0b3c8a; /* dark mode default */
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
+/* Icon wrapper */
 .theme-toggle .icon {
+    font-size: 16px;
     position: absolute;
     inset: 0;
     display: grid;
     place-items: center;
-    font-size: 16px;
+    transition: opacity 0.3s ease;
 }
 
+/* Sun (light mode) */
 .theme-toggle .sun {
     opacity: 0;
 }
 
-.light-mode .theme-toggle {
-    background-color: #ffd966;
-}
-
-.light-mode .theme-toggle .sun {
+/* Moon (dark mode) */
+.theme-toggle .moon {
     opacity: 1;
 }
 
-.light-mode .theme-toggle .moon {
+/* When light mode is active */
+body.light-mode .theme-toggle {
+    background-color: #f0f0f0;
+}
+
+body.light-mode .theme-toggle .sun {
+    opacity: 1;
+}
+
+body.light-mode .theme-toggle .moon {
     opacity: 0;
 }
 
@@ -251,14 +263,13 @@ footer {
 
 /* ===== Mobile ===== */
 
+/* Mobile adjustments */
 @media (max-width: 600px) {
-    nav a {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
-
     .theme-toggle {
-        width: 48px;
+        width: 50px;
         height: 28px;
+    }
+    .theme-toggle .icon {
+        font-size: 14px;
     }
 }
