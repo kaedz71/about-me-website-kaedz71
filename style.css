@@ -47,7 +47,7 @@ nav {
     padding: 0.5rem 1rem;
     flex-wrap: nowrap
 }
-nav a, .themeBtn {
+nav a {
     text-decoration: none;
     color: navy;
     background-color: deepskyblue;
