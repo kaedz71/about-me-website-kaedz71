@@ -70,6 +70,7 @@ nav {
     border-radius: 10px;
     margin-bottom: 20px;
 
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -93,7 +94,11 @@ nav a:hover {
 /* ===== Theme Toggle ===== */
 
 .theme-toggle {
-    margin-left: auto;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
     width: 60px;
     height: 32px;
     border-radius: 20px;
@@ -101,7 +106,6 @@ nav a:hover {
     cursor: pointer;
     background-color: #0b3c8a;
 
-    position: relative;
     overflow: hidden;
 }
 
@@ -111,15 +115,22 @@ nav a:hover {
     display: grid;
     place-items: center;
     font-size: 16px;
-    line-height: 16px;
 }
 
 .theme-toggle .sun {
     opacity: 0;
 }
 
-.theme-toggle .moon {
+.light-mode .theme-toggle {
+    background-color: #ffd966;
+}
+
+.light-mode .theme-toggle .sun {
     opacity: 1;
+}
+
+.light-mode .theme-toggle .moon {
+    opacity: 0;
 }
 
 /* ===== Buttons ===== */
@@ -241,16 +252,6 @@ footer {
 /* ===== Mobile ===== */
 
 @media (max-width: 600px) {
-
-    body {
-        padding: 10px;
-    }
-
-    .page-title {
-        font-size: 2rem;
-        text-align: center;
-    }
-
     nav a {
         font-size: 16px;
         padding: 6px 10px;
@@ -259,14 +260,5 @@ footer {
     .theme-toggle {
         width: 48px;
         height: 28px;
-    }
-
-    .randomiserBtn {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .container {
-        padding: 10px;
     }
 }
