@@ -169,11 +169,13 @@ nav, a, button, footer {
 }
 
 .content img {
-    max-width: 700px; 
-    height: auto;
     border-radius: 8px;
     display: block;
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .spinner {
@@ -243,4 +245,43 @@ body.light-mode .spinner {
 
 .light-mode .theme-toggle .moon {
     opacity: 0;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    nav a,
+    .themeBtn {
+        font-size: 16px;
+        padding: 6px 10px;
+        margin-right: 0;
+    }
+
+    .randomiserBtn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .content img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
 }
