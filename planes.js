@@ -56,6 +56,9 @@ randomPlaneBtn.addEventListener("click", () => {
         <img src="${plane.img}" alt="${plane.name}">
         <p class="desc">${plane.desc}</p>
         `;
+        content.classList.remove("show");
+        void content.offsetWidth;
+        content.classList.add("show");
 
         content.style.display = "block";
         setTimeout(() => {
